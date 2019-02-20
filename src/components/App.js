@@ -1,19 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 
 import Main from "./Main";
+import Header from "./Header/Header";
 import "./App.css";
 
-const Header = () => (
-  <div>
-    <p>header</p>
-    <Link to="/home">go home</Link>
-    <p>wow</p>
-    <Link to="/">go initial</Link>
-  </div>
-)
+
 class App extends React.Component {
   constructor(props){
     super(props);

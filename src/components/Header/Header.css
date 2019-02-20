@@ -1,0 +1,40 @@
+.app-header {
+  margin: 0;
+  padding: 0 15px;
+  font-family: 'muli,Arial,sans-serif';
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd; }
+  .app-header .left-menu {
+    display: flex;
+    justify-content: space-between; }
+    .app-header .left-menu .app-logo {
+      font-family: 'muli,Arial,sans-serif';
+      padding: 15px 20px;
+      border-right: 1px solid #ddd; }
+      .app-header .left-menu .app-logo > .logo {
+        text-decoration: none;
+        color: #3797da; }
+      .app-header .left-menu .app-logo .logo:hover {
+        color: #333; }
+    .app-header .left-menu .app-dashboard {
+      padding: 15px 20px; }
+      .app-header .left-menu .app-dashboard > a {
+        text-decoration: none;
+        color: #777; }
+      .app-header .left-menu .app-dashboard a:hover {
+        color: #333; }
+    .app-header .left-menu .app-newAutomation {
+      padding: 15px 20px; }
+      .app-header .left-menu .app-newAutomation > a {
+        text-decoration: none;
+        color: #777; }
+      .app-header .left-menu .app-newAutomation a:hover {
+        color: #333; }
+  .app-header .right-menu {
+    padding: 15px 20px; }
+    .app-header .right-menu > a {
+      text-decoration: none;
+      color: #777; }
+    .app-header .right-menu a:hover {
+      color: #333; }
