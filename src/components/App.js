@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import Main from "./Main";
+import "./App.css";
 
 const Header = () => (
   <div>

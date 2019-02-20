@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "npm-run-all": "^4.1.2",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
+    "node-sass": "^4.11.0",
     "react": "^16.3.2",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
@@ -16,12 +18,16 @@
     "redux-saga": "^0.16.0"
   },
   "scripts": {
-    "start": "PORT=3003 react-scripts start",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "PORT=3003 npm-run-all -p watch-css start-js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "node-sass-chokidar": "0.0.3",
     "redux-devtools": "^3.4.1"
   }
 }
