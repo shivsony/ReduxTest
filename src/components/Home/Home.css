@@ -1,2 +1,8 @@
 .home {
   text-align: center; }
+  .home .home-body {
+    padding: 20px 40px; }
+
+.make-flex {
+  display: flex;
+  justify-content: space-between; }
