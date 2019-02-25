@@ -6,6 +6,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 import Main from "./Main";
 import Header from "./Header/Header";
+import { requestAction } from "../ducks/temp"
 import "./App.css";
 
 const theme = createMuiTheme({
@@ -32,6 +33,9 @@ class App extends React.Component {
       value: 0
     }
   }
+  componentDidMount() {
+    this.props.request();
+  }
   render() {
     return (
       <React.Fragment>
@@ -45,4 +49,9 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default connect(
+  null,
+  {
+    request: requestAction
+  }
+)(App);
