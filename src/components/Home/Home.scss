@@ -1,8 +1,28 @@
 .home {
-    text-align: center;
+    text-align: left;
 
     .home-body {
         padding: 20px 40px;
+
+        .tree {
+            .node {
+                display: flex;
+                .node--expand {
+                    padding: 10px;
+                    cursor: pointer;
+
+                }:active {
+                    color: #777;
+                }
+                .node--select {
+                    padding: 10px;
+                    cursor: default;
+                }
+                .node--select:active {
+                    color: #1f4;
+                }
+            }
+        }
     }
 }
 

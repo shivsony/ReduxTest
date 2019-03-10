@@ -3,9 +3,9 @@ import { Switch, Route } from "react-router-dom";
 
 import Home from "../components/Home/Home";
 import Dashboard from './Dashboard/Dashboard';
+import NewAutomation from './NewAutomation/NewAutomation';
 
 const Logout = () => (<div>Logout</div>);
-const NewAutomation = () => (<div>New Automation</div>);
 const Main = () => (
   <Switch>
     <Route exact path="/" component={Home} />

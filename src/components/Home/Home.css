@@ -1,7 +1,19 @@
 .home {
-  text-align: center; }
+  text-align: left; }
   .home .home-body {
     padding: 20px 40px; }
+    .home .home-body .tree .node {
+      display: flex; }
+      .home .home-body .tree .node .node--expand {
+        padding: 10px;
+        cursor: pointer; }
+      .home .home-body .tree .node :active {
+        color: #777; }
+      .home .home-body .tree .node .node--select {
+        padding: 10px;
+        cursor: default; }
+      .home .home-body .tree .node .node--select:active {
+        color: #1f4; }
 
 .make-flex {
   display: flex;
