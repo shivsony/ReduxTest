@@ -20,11 +20,8 @@ class Node extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        click: false
+      click: false
     }
-  }
-  componentDidMount(){
-    this.props.getRootFolderRequest();
   }
 
   handleClickedAndAddChild = e => {
@@ -37,8 +34,7 @@ class Node extends React.Component {
   }
 
   render() {
-    const { name, folder, subFolders } = this.props;
-    console.log(subFolders.subFolder);
+    const { folder, subFolders, id, handleOnclick } = this.props;
     return (
       <React.Fragment>
         <div className="node">
@@ -55,9 +51,11 @@ class Node extends React.Component {
             </div>
         </div>
         {this.state.click === true && (
-          <div>
+          <div className="tree-list">
             <ul>
-              {subFolders.subFolder &&  makeData(subFolders.subFolder).map(obj => <li>{obj.name}</li>)}
+              {subFolders.subFolder &&  
+                makeData(subFolders.subFolder).map( (obj, i) => <li onClick={() => handleOnclick(id,obj.name)} key={i}>{obj.name}</li>)
+              }
             </ul>
         </div>
         )}

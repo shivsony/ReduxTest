@@ -8,18 +8,48 @@
             .node {
                 display: flex;
                 .node--expand {
-                    padding: 10px;
+                    padding: 2px;
                     cursor: pointer;
 
                 }:active {
                     color: #777;
                 }
                 .node--select {
-                    padding: 10px;
+                    padding: 2px;
                     cursor: default;
                 }
                 .node--select:active {
                     color: #1f4;
+                }
+            }
+            .tree-list {
+                padding-left: 40px;
+                ul {
+                    margin: 0;
+                    list-style: none;
+                    padding: 0;
+                    content: "";
+                    display: block;
+                    border-left: 1px solid;
+                }
+                li {
+                    position: relative;
+                    line-height: 2em;
+                    padding: 0 1.5em; 
+                }
+                li:hover {
+                    cursor: pointer;
+                    color: #3796db;
+                }
+                li::before {
+                    content: "";
+                    display: block;
+                    width: 20px;
+                    border-top: 1px solid;
+                    position: absolute;
+                    margin-top: 14px;
+                    margin-left: -24px;
+                    //top: 12em;
                 }
             }
         }

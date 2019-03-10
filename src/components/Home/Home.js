@@ -21,9 +21,13 @@ const makeData = object => {
 class Home extends React.Component {
   constructor(props){
     super(props);
+    this.handleOnclick = this.handleOnclick.bind(this);
   }
   componentDidMount() {
     this.props.getRootFolderRequest()
+  }
+  handleOnclick = (parent, child) => {
+    console.log(parent, child);
   }
   render(){
     const { folders } = this.props;
@@ -33,9 +37,9 @@ class Home extends React.Component {
           <div className="home-body">
             {/* <MainTable /> */}
             <div className="tree">
-            {makeData(folders).map((obj,i) => {
-              return <Node id={obj.name} folder={obj} key={i} />
-            })}
+              {makeData(folders).map((obj,i) => {
+                return <Node id={obj.name} folder={obj} handleOnclick={this.handleOnclick} key={i} />
+              })}
             </div>
           </div>
       </div>

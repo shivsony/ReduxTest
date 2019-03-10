@@ -5,15 +5,39 @@
     .home .home-body .tree .node {
       display: flex; }
       .home .home-body .tree .node .node--expand {
-        padding: 10px;
+        padding: 2px;
         cursor: pointer; }
       .home .home-body .tree .node :active {
         color: #777; }
       .home .home-body .tree .node .node--select {
-        padding: 10px;
+        padding: 2px;
         cursor: default; }
       .home .home-body .tree .node .node--select:active {
         color: #1f4; }
+    .home .home-body .tree .tree-list {
+      padding-left: 40px; }
+      .home .home-body .tree .tree-list ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        content: "";
+        display: block;
+        border-left: 1px solid; }
+      .home .home-body .tree .tree-list li {
+        position: relative;
+        line-height: 2em;
+        padding: 0 1.5em; }
+      .home .home-body .tree .tree-list li:hover {
+        cursor: pointer;
+        color: #3796db; }
+      .home .home-body .tree .tree-list li::before {
+        content: "";
+        display: block;
+        width: 20px;
+        border-top: 1px solid;
+        position: absolute;
+        margin-top: 14px;
+        margin-left: -24px; }
 
 .make-flex {
   display: flex;
